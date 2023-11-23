@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="./icon/moon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-login">
+        <div class="logo">
+              <img src="image2.jpeg" alt="Logo da Empresa">
+          </div>
+        <div class="left-login">
+            <h1>Biblioteca CDL</h1>
+            <a>
+                <img src="image1.jpeg" alt="Library" class="jpg">
+            </a>
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <div class="login-name">
+                    <h1>LOGIN</h1>
+                    
+                </div>
+                <div class="textfield">
+                    <input id="user" class="input" required type="text" name="usuario">
+                    <label class="label" for="usuario">Usuário</label>
+                </div>
+                <div class="textfield">
+                    <input id="password" onchange="validateFields()" class="input" required type="password" name="senha">
+                    <label class="label" for="senha">Senha</label>
+                </div>
+                <button id="login-button" class="button-login" onclick="Login()">Entrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
