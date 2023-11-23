@@ -5,6 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
       // Se não estiver autenticado, redireciona de volta para a página de login
       window.location.href = 'index.html';
     }
+    else{
+        Toastify({
+            text: "Bem Vindo (a)",
+            duration: 2000, // 3 segundos
+            gravity: "top", // "top" ou "bottom"
+            position: 'right', // 'left', 'center', ou 'right'
+            backgroundColor: "linear-gradient(to right, #4CAF50, #45a049)", // Cor de fundo para sucesso
+            close: true, // Mostra o botão de fechar
+          }).showToast();
+    
+    }
   });
 
 function updateDate() {

@@ -21,10 +21,21 @@ function Login(){
     if (user === 'adimin' && password === 'adimin') {
       console.log('Login bem-sucedido como admin');
       localStorage.setItem('userAuthenticated', 'true');
+
+     
       // Redireciona para a página de administração
       window.location.href = 'home.html';
     } else {
       console.error('Erro no login: Credenciais inválidas');
+      Toastify({
+        text: "Usuario ou senha incorretas",
+        duration: 2000, // 5 segundos
+        gravity: "top", // "top" ou "bottom"
+        position: 'right', // 'left', 'center', ou 'right'
+        backgroundColor: "linear-gradient(to right, #ff8a00, #e52e71)", // Cor de fundo para aviso
+        close: true, // Mostra o botão de fechar
+
+      }).showToast();
       // Trate a tentativa de login com credenciais inválidas
     }
 }
